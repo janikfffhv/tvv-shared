@@ -9,5 +9,5 @@ import java.util.List;
 
 public interface EventSearch extends Remote {
     List<EventSearchDTO> searchByString(String searchString) throws RemoteException;
-    List<EventSearchDTO> searchByDate(Date searchDate) throws RemoteException;
+    List<EventSearchDTO> searchByDate(String searchDate) throws RemoteException;
 }
