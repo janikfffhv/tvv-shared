@@ -10,13 +10,13 @@ public class EventSearchDTO implements Serializable {
 
     private final String veranstaltungsserie;
 
-    private final Date datum;
+    private final String datum;
 
     private final String ort;
 
     private final int plaetze;
 
-    public EventSearchDTO (int eventId, String name, String veranstaltungsserie, Date datum, String ort, int plaetze) {
+    public EventSearchDTO (int eventId, String name, String veranstaltungsserie, String datum, String ort, int plaetze) {
         this.eventId = eventId;
         this.name = name;
         this.veranstaltungsserie = veranstaltungsserie;
@@ -37,7 +37,7 @@ public class EventSearchDTO implements Serializable {
         return veranstaltungsserie;
     }
 
-    public Date getDatum() {
+    public String getDatum() {
         return datum;
     }
 
