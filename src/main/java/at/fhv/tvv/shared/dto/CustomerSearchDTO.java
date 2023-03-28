@@ -11,12 +11,12 @@ public class CustomerSearchDTO implements Serializable {
     private final String geburtsdatum;
     private final String hausnummer;
     private final String strasse;
-    private final String plz;
+    private final int plz;
     private final String ort;
     private final String land;
     private final String telefonnummer;
 
-    public CustomerSearchDTO(UUID customerId, String vorname, String nachname, String geburtsdatum, String hausnummer, String strasse, String plz, String ort, String land, String telefonnummer) {
+    public CustomerSearchDTO(UUID customerId, String vorname, String nachname, String geburtsdatum, String hausnummer, String strasse, int plz, String ort, String land, String telefonnummer) {
         this.customerId = customerId;
         this.vorname = vorname;
         this.nachname = nachname;
@@ -53,7 +53,7 @@ public class CustomerSearchDTO implements Serializable {
         return strasse;
     }
 
-    public String getPlz() {
+    public int getPlz() {
         return plz;
     }
 
