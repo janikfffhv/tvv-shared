@@ -2,6 +2,7 @@ package at.fhv.tvv.shared.dto;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 public class EventSearchDTO implements Serializable {
     private final int eventId;
@@ -47,5 +48,18 @@ public class EventSearchDTO implements Serializable {
 
     public int getPlaetze() {
         return plaetze;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        EventSearchDTO that = (EventSearchDTO) o;
+        return eventId == that.eventId && datum == that.datum && plaetze == that.plaetze && Objects.equals(name, that.name) && Objects.equals(veranstaltungsserie, that.veranstaltungsserie) && Objects.equals(ort, that.ort);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(eventId, name, veranstaltungsserie, datum, ort, plaetze);
     }
 }
