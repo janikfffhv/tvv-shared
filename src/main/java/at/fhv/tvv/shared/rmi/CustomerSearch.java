@@ -10,5 +10,5 @@ import java.util.UUID;
 
 public interface CustomerSearch extends Remote {
     List<CustomerSearchDTO> searchByString(String searchString) throws RemoteException;
-    Optional<CustomerSearchDTO> searchById(UUID id) throws RemoteException;
+    CustomerSearchDTO searchById(UUID id) throws RemoteException;
 }
