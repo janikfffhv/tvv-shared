@@ -15,15 +15,18 @@ public class EventSearchDTO implements Serializable {
 
     private final String ort;
 
-    private final int plaetze;
+    private final int plaetzeGesamt;
 
-    public EventSearchDTO (int eventId, String name, String veranstaltungsserie, int datum, String ort, int plaetze) {
+    private final int plaetzeVerfuegbar;
+
+    public EventSearchDTO(int eventId, String name, String veranstaltungsserie, int datum, String ort, int plaetzeGesamt, int plaetzeVerfuegbar) {
         this.eventId = eventId;
         this.name = name;
         this.veranstaltungsserie = veranstaltungsserie;
         this.datum = datum;
         this.ort = ort;
-        this.plaetze = plaetze;
+        this.plaetzeGesamt = plaetzeGesamt;
+        this.plaetzeVerfuegbar = plaetzeVerfuegbar;
     }
 
     public int getEventId() {
@@ -46,8 +49,12 @@ public class EventSearchDTO implements Serializable {
         return ort;
     }
 
-    public int getPlaetze() {
-        return plaetze;
+    public int getPlaetzeGesamt() {
+        return plaetzeGesamt;
+    }
+
+    public int getPlaetzeVerfuegbar() {
+        return plaetzeVerfuegbar;
     }
 
     @Override
@@ -55,11 +62,11 @@ public class EventSearchDTO implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         EventSearchDTO that = (EventSearchDTO) o;
-        return eventId == that.eventId && datum == that.datum && plaetze == that.plaetze && Objects.equals(name, that.name) && Objects.equals(veranstaltungsserie, that.veranstaltungsserie) && Objects.equals(ort, that.ort);
+        return eventId == that.eventId && datum == that.datum && plaetzeGesamt == that.plaetzeGesamt && plaetzeVerfuegbar == that.plaetzeVerfuegbar && Objects.equals(name, that.name) && Objects.equals(veranstaltungsserie, that.veranstaltungsserie) && Objects.equals(ort, that.ort);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(eventId, name, veranstaltungsserie, datum, ort, plaetze);
+        return Objects.hash(eventId, name, veranstaltungsserie, datum, ort, plaetzeGesamt, plaetzeVerfuegbar);
     }
 }
