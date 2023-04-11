@@ -6,13 +6,15 @@ public class PlatzDTO {
     private final String kategorie;
     private final int reihe;
     private final int verkaufsId;
+    private final float preis;
 
-    public PlatzDTO(int platzId, int nummer, String kategorie, int reihe, int verkaufsId) {
+    public PlatzDTO(int platzId, int nummer, String kategorie, int reihe, int verkaufsId, float preis) {
         this.platzId = platzId;
         this.nummer = nummer;
         this.kategorie = kategorie;
         this.reihe = reihe;
         this.verkaufsId = verkaufsId;
+        this.preis = preis;
     }
 
     public int getPlatzId() {
@@ -33,5 +35,9 @@ public class PlatzDTO {
 
     public int getVerkaufsId() {
         return verkaufsId;
+    }
+
+    public float getPreis() {
+        return preis;
     }
 }
