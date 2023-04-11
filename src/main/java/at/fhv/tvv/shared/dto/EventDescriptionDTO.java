@@ -1,6 +1,7 @@
 package at.fhv.tvv.shared.dto;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 public class EventDescriptionDTO implements Serializable {
@@ -21,9 +22,9 @@ public class EventDescriptionDTO implements Serializable {
     private final String raum;
 
     private final String beschreibung;
-    private final int plaetze;
+    private final List<PlatzDTO> plaetze;
 
-    public EventDescriptionDTO(int eventId, String name, String veranstaltungsserie, String veranstalter, String kategorie, int datum, String gebaeude, String strasse, String hausnummer, int plz, String ort, String raum, String beschreibung, int plaetze) {
+    public EventDescriptionDTO(int eventId, String name, String veranstaltungsserie, String veranstalter, String kategorie, int datum, String gebaeude, String strasse, String hausnummer, int plz, String ort, String raum, String beschreibung, List<PlatzDTO> plaetze) {
         this.eventId = eventId;
         this.name = name;
         this.veranstaltungsserie = veranstaltungsserie;
@@ -64,7 +65,7 @@ public class EventDescriptionDTO implements Serializable {
         return beschreibung;
     }
 
-    public int getPlaetze() {
+    public List<PlatzDTO> getPlaetze() {
         return plaetze;
     }
 
