@@ -1,5 +1,6 @@
 package at.fhv.tvv.shared.dto;
 
+import java.util.Optional;
 import java.util.UUID;
 
 public class PlatzDTO {
@@ -7,10 +8,10 @@ public class PlatzDTO {
     private final int nummer;
     private final String kategorie;
     private final int reihe;
-    private final UUID verkaufsId;
+    private final Optional<UUID> verkaufsId;
     private final float preis;
 
-    public PlatzDTO(int platzId, int nummer, String kategorie, int reihe, UUID verkaufsId, float preis) {
+    public PlatzDTO(int platzId, int nummer, String kategorie, int reihe, Optional<UUID> verkaufsId, float preis) {
         this.platzId = platzId;
         this.nummer = nummer;
         this.kategorie = kategorie;
@@ -35,7 +36,7 @@ public class PlatzDTO {
         return reihe;
     }
 
-    public UUID getVerkaufsId() {
+    public Optional<UUID> getVerkaufsId() {
         return verkaufsId;
     }
 
