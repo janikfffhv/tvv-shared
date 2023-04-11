@@ -1,9 +1,10 @@
 package at.fhv.tvv.shared.dto;
 
+import java.io.Serializable;
 import java.util.Optional;
 import java.util.UUID;
 
-public class PlatzDTO {
+public class PlatzDTO implements Serializable {
     private final int platzId;
     private final int nummer;
     private final String kategorie;
