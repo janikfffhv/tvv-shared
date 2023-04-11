@@ -9,10 +9,10 @@ public class PlatzDTO implements Serializable {
     private final int nummer;
     private final String kategorie;
     private final int reihe;
-    private final Optional<UUID> verkaufsId;
+    private final String verkaufsId;
     private final float preis;
 
-    public PlatzDTO(int platzId, int nummer, String kategorie, int reihe, Optional<UUID> verkaufsId, float preis) {
+    public PlatzDTO(int platzId, int nummer, String kategorie, int reihe, String verkaufsId, float preis) {
         this.platzId = platzId;
         this.nummer = nummer;
         this.kategorie = kategorie;
@@ -37,7 +37,7 @@ public class PlatzDTO implements Serializable {
         return reihe;
     }
 
-    public Optional<UUID> getVerkaufsId() {
+    public String getVerkaufsId() {
         return verkaufsId;
     }
 
