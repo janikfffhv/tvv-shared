@@ -8,9 +8,9 @@ public class CustomerEventDTO implements Serializable {
     private final String verkaufsZeitpunkt;
     private final String zahlungsmethode;
 
-    private final Long gesamtPreis;
+    private final float gesamtPreis;
 
-    public CustomerEventDTO(UUID ticketID, String verkaufsZeitpunkt, String zahlungsmethode, Long gesamtPreis) {
+    public CustomerEventDTO(UUID ticketID, String verkaufsZeitpunkt, String zahlungsmethode, float gesamtPreis) {
         this.ticketID = ticketID;
         this.gesamtPreis = gesamtPreis;
         this.verkaufsZeitpunkt = verkaufsZeitpunkt;
@@ -29,7 +29,7 @@ public class CustomerEventDTO implements Serializable {
         return zahlungsmethode;
     }
 
-    public Long getGesamtPreis() {
+    public float getGesamtPreis() {
         return gesamtPreis;
     }
 }
