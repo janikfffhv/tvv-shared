@@ -5,13 +5,14 @@ import java.util.UUID;
 
 public class CustomerEventDTO implements Serializable {
     private final UUID ticketID;
-    private final String eventName;
     private final String verkaufsZeitpunkt;
     private final String zahlungsmethode;
 
-    public CustomerEventDTO(UUID ticketID, String eventName, String verkaufsZeitpunkt, String zahlungsmethode) {
+    private final Long gesamtPreis;
+
+    public CustomerEventDTO(UUID ticketID, String eventName, String verkaufsZeitpunkt, String zahlungsmethode, Long gesamtPreis) {
         this.ticketID = ticketID;
-        this.eventName = eventName;
+        this.gesamtPreis = gesamtPreis;
         this.verkaufsZeitpunkt = verkaufsZeitpunkt;
         this.zahlungsmethode = zahlungsmethode;
     }
@@ -20,15 +21,15 @@ public class CustomerEventDTO implements Serializable {
         return ticketID;
     }
 
-    public String getEventName() {
-        return eventName;
-    }
-
     public String getVerkaufsZeitpunkt() {
         return verkaufsZeitpunkt;
     }
 
     public String getZahlungsmethode() {
         return zahlungsmethode;
+    }
+
+    public Long getGesamtPreis() {
+        return gesamtPreis;
     }
 }
