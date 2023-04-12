@@ -10,7 +10,7 @@ public class CustomerEventDTO implements Serializable {
 
     private final Long gesamtPreis;
 
-    public CustomerEventDTO(UUID ticketID, String eventName, String verkaufsZeitpunkt, String zahlungsmethode, Long gesamtPreis) {
+    public CustomerEventDTO(UUID ticketID, String verkaufsZeitpunkt, String zahlungsmethode, Long gesamtPreis) {
         this.ticketID = ticketID;
         this.gesamtPreis = gesamtPreis;
         this.verkaufsZeitpunkt = verkaufsZeitpunkt;
