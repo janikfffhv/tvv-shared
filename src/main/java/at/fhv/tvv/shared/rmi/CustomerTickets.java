@@ -6,6 +6,6 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.UUID;
 
-public interface CustomerUUID extends Remote {
+public interface CustomerTickets extends Remote {
     CustomerInfoDTO searchById(UUID id) throws RemoteException;
 }
