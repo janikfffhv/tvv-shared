@@ -11,10 +11,12 @@ public interface TvvSession extends Remote {
     List<WarenkorbZeileDTO> getWarenkorb() throws RemoteException;
     UUID getKunde() throws RemoteException;
     String getZahlungsMethode() throws RemoteException;
+    String getBenutzerName() throws RemoteException;
     void hinzufuegen(WarenkorbZeileDTO warenkorbZeile) throws RemoteException;
     void loeschen (WarenkorbZeileDTO warenkorbZeile) throws RemoteException;
     void leeren() throws RemoteException;
 
     void hinzufuegenKunde(UUID kunde) throws RemoteException;
+    void setBenutzerName(String name) throws RemoteException;
     void hinzufuegenZahlungsMethode(String zahlungsmethode) throws RemoteException;
 }
