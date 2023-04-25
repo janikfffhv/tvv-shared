@@ -12,10 +12,14 @@ public interface TvvSession {
     UUID getKunde();
     String getBenutzerName();
     String getZahlungsMethode();
+    List<String> getRollen();
+    List<String> getTopics();
     void hinzufuegen(WarenkorbZeileDTO warenkorbZeile);
     void loeschen (WarenkorbZeileDTO warenkorbZeile);
     void leeren();
     void hinzufuegenKunde(UUID kunde);
     void setBenutzerName(String name);
     void hinzufuegenZahlungsMethode(String zahlungsmethode);
+    void setRollen(List<String> rollen);
+    void setTopics(List<String> topics);
 }
