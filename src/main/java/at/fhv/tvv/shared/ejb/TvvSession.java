@@ -10,11 +10,12 @@ import java.util.UUID;
 public interface TvvSession {
     List<WarenkorbZeileDTO> getWarenkorb();
     UUID getKunde();
+    String getBenutzerName();
     String getZahlungsMethode();
     void hinzufuegen(WarenkorbZeileDTO warenkorbZeile);
     void loeschen (WarenkorbZeileDTO warenkorbZeile);
     void leeren();
-
     void hinzufuegenKunde(UUID kunde);
+    void setBenutzerName(String name);
     void hinzufuegenZahlungsMethode(String zahlungsmethode);
 }
