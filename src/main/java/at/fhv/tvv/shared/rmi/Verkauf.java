@@ -6,5 +6,5 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 public interface Verkauf extends Remote {
-    void kaufe(VerkaufDTO verkauf) throws RemoteException;
+    boolean kaufe(VerkaufDTO verkauf) throws RemoteException;
 }
