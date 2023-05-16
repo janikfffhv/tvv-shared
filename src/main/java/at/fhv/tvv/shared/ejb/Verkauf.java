@@ -6,5 +6,5 @@ import javax.ejb.Remote;
 
 @Remote
 public interface Verkauf {
-    void kaufe(VerkaufDTO verkauf);
+    boolean kaufe(VerkaufDTO verkauf);
 }
