@@ -9,4 +9,5 @@ import java.util.List;
 @Remote
 public interface MessageConsumer {
     List<MessageDTO> getMessages(String userName);
+    boolean acknowledgeMessage(String s);
 }
